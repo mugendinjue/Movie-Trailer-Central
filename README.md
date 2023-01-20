@@ -1,39 +1,47 @@
-# create-svelte
+# Movie Trailer Central
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Welcome to Movie Trailer Central, a web application built using [Svelte](https://svelte.dev/) that allows you to easily browse and watch trailers for the latest movies.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Browse the latest movies and trailers using the [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api).
+- Watch trailers directly on the site using the [YouTube API](https://developers.google.com/youtube/v3).
+- View movie details, including plot summary, release date, and cast.
+- Search for movies by title or filter by genre.
+- View movie posters and backdrops.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Demos
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Browse Movies
 
-## Developing
+![Browse Movies Demo](browse-movies-demo.gif)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Watch Trailers
 
-```bash
-npm run dev
+![Watch Trailers Demo](watch-trailers-demo.gif)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Movie Details
 
-## Building
+![Movie Details Demo](movie-details-demo.gif)
 
-To create a production version of your app:
+## Getting Started
 
-```bash
-npm run build
-```
+1. Clone the repository: `git clone https://github.com/username/movie-trailer-central.git`
+2. Install the dependencies: `npm install`
+3. Replace the `TMDB_API_KEY` and `YOUTUBE_API_KEY` placeholders in `src/config.js` with your own API keys.
+4. Start the development server: `npm run dev`
+5. Open the application in your browser at `http://localhost:5000`
 
-You can preview the production build with `npm run preview`.
+## Built With
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# Movie-Trailer-Central
+- [Svelte](https://svelte.dev/) - JavaScript framework for building user interfaces
+- [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) - Movie and TV show information
+- [YouTube API](https://developers.google.com/youtube/v3) - Video hosting and playback
+
+## Contributing
+
+If you're interested in contributing to the project, please submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
