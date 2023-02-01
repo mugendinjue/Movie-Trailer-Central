@@ -1,0 +1,13 @@
+body {
+    padding: 2rem;
+}
+  
+h1 {
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}

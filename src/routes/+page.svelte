@@ -11,10 +11,3 @@
 
 
 <img class="logo" src={logo} alt="logo">
-
-<style>
-    .logo {
-        width: 200px;
-        height: 200px;
-    }
-</style>
