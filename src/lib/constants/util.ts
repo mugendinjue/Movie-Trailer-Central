@@ -13,6 +13,12 @@ export const defaultLang : string = `en-US`;
 
 export const movieDBUrl : string = `https://api.themoviedb.org/3/genre/movie/list?api_key=`;
 
+export let movieURL : string = `https://api.themoviedb.org/3/movie/`;
+
+export let nonMovieURL : string = `https://api.themoviedb.org/3/`;
+
+export const moviesTypes : string[] = ['trending','now_playing','popular','top_rated','upcoming'];
+
 export const keyFeatures : stringArr = [
     "Discover the latest movie trailers",
     "Stay informed about upcoming releases",

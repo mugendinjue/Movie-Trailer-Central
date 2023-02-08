@@ -1,18 +1,18 @@
-
 import type { PageServerLoad } from './$types'
+import { defaultLang, moviesTypes, movieURL, nonMovieURL } from '$lib//constants/util';
+import { MOVIE_API_KEY } from '$env/static/private';
 
-import { trendingMovies } from '$lib//constants/util';
+export const load: PageServerLoad = async ({ fetch }) => {
+  let movie_data: { [key: string]: any } = {};
 
-import { MOVIE_API_KEY } from '$env/static/private'
+  for (const movie of moviesTypes) {
+    let movie_url = `${movie == 'trending' ? nonMovieURL :movieURL}${movie}${movie == 'trending' ? '/all/day' : ''}?api_key=${MOVIE_API_KEY}&language=${defaultLang}`;
 
-// Fetch all the available genre from IMDB
-export const load: PageServerLoad = async ({fetch}) => {
+    const response = await fetch(movie_url);
+    const data = await response.json();
 
-    // let url = `${trendingMovies}${MOVIE_API_KEY}`
+    movie_data[movie] = data;
+  }
 
-    // let trending = await fetch(url);
-
-    // trending = await trending.json();
-
-    // return trending;
-}
+  return movie_data;
+};

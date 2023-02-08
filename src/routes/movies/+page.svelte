@@ -1,14 +1,16 @@
-<!-- <script>
-    import { Carousel } from 'flowbite-svelte'
-    let showThumbs=false
-    let showCaptions=false
+<script lang="ts">
+  import { Carousel } from 'flowbite-svelte'
+  let showThumbs=false
+  let showCaptions=false
+
     export let data;
 
-    let {movies} = data;
-</script> -->
-  
-<!-- <div class="max-w-4xl">
-    <Carousel {} loop {showCaptions} {showThumbs} duration="3000"/>
-</div> -->
+    let {trending : {results:trends}} = data;
 
-<h1>Home page</h1>
+    let images : any[] = trends.map( (trend : any) => { return {id: trend.id, imgurl: `https://image.tmdb.org/t/p/w500${trend.backdrop_path}`, name: trend.backdrop_path, attribution: trend.backdrop_path}})
+
+</script>
+
+<div class="max-w-4xl">
+    <Carousel {images} loop {showCaptions} {showThumbs} duration="6000" divClass="4xl:h-96"/>
+</div>
