@@ -1,8 +1,8 @@
 <script lang="ts">
 
     export let data
-	import '../app.postcss';
-    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem, Chevron, DarkMode, Footer, FooterCopyright, FooterLinkGroup, FooterLink, FooterBrand, FooterIcon, P, Input, Button } from 'flowbite-svelte'
+	  import '../app.postcss';
+    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem, Chevron, DarkMode, Footer, FooterCopyright, FooterLinkGroup, FooterLink, FooterBrand, FooterIcon } from 'flowbite-svelte'
     import logo from '$lib/assets/logo3.png';
     import { navTabs } from '$lib/constants/util';
     import { QuickLinks } from '$lib/constants/util';
@@ -24,7 +24,7 @@
     <NavUl {hidden}>
         {#each navTabs as nav_item}
             {#if nav_item.toLowerCase() == 'home'}
-                <NavLi href="/movies" active={true}>Home</NavLi>
+                <NavLi href="/home" active={true}>Home</NavLi>
             {:else if ['genre'].includes(nav_item.toLowerCase())}
                 <NavLi id="genre" data-sveltekit-prefetch class="cursor-pointer"><Chevron aligned>{nav_item}</Chevron></NavLi>
             {:else}
@@ -33,7 +33,9 @@
         {/each}
         <Dropdown triggeredBy="#genre" class="w-44 z-20">
             {#each genres as genre}
-            <DropdownItem>{genre.name}</DropdownItem>
+              <a href={`/genre/${genre.name}/${genre.id}`}>
+                <DropdownItem>{genre.name}</DropdownItem>
+              </a>
             {/each}
         </Dropdown>
     </NavUl>
@@ -80,3 +82,10 @@
       </Footer>
 </div>
 
+<style>
+  .footer {
+    margin-top: 40px;
+    background-color: black;
+  }
+  
+</style>

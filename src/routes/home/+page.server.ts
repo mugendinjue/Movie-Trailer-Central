@@ -1,4 +1,4 @@
-import type { PageServerLoad } from './$types'
+import type { PageServerLoad } from '../home/$types'
 import { defaultLang, moviesTypes, movieURL, nonMovieURL } from '$lib//constants/util';
 import { MOVIE_API_KEY } from '$env/static/private';
 

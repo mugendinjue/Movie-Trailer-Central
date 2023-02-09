@@ -20,15 +20,16 @@ export let nonMovieURL : string = `https://api.themoviedb.org/3/`;
 export const moviesTypes : string[] = ['trending','now_playing','popular','top_rated','upcoming'];
 
 export const keyFeatures : stringArr = [
-    "Discover the latest movie trailers",
-    "Stay informed about upcoming releases",
-    "Watch trailers in high definition",
-    "Enjoy a sleek and intuitive user interface"
+    // "Discover the latest movie trailers",
+    // "Stay informed about upcoming releases",
+    // "Watch trailers in high definition",
+    // "Enjoy a sleek and intuitive user interface"
 ];
 
 export const appName : string = "Trailer Park"
 
 export const QuickLinks : objArr = [
+    {label:"Home", path: "/home"},
     {label:"Movies", path: "/movies"},
     {label:"TV Shows", path: "/tv shows"},
     {label:"Top IMDB", path: "/movies"},
