@@ -2,12 +2,20 @@
 
     export let movie : any;
 
-    import { P } from 'flowbite-svelte'
+    import { P } from 'flowbite-svelte';
+
+    let movie_name = movie.name ?? movie.title;
+
+    movie_name = movie_name.replace(/\s+/g, '-').toLowerCase();
+
+    export let type : string;
+
+    export let is_similar_tab : boolean;
 
 </script>
 
 <div class="movie-card">
-    <img src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path} alt="movie.name ?? movie.title">
+    <a href={`/${type}/${movie_name}--${movie.id}`}><img src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path} alt={`${movie.name ?? movie.title}`}></a>
     <div class="description">
         <div class="tt">
             <P>{movie.name ?? movie.title}</P>
@@ -19,7 +27,7 @@
 <style>
     img {
         width: 100%;
-        height: 30vh;
+        height: 50vh;
         object-fit: cover;
         border-radius: 1rem;
         margin-bottom: 1rem;

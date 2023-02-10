@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
   let movie_data: { [key: string]: any } = {};
 
   for (const movie of moviesTypes) {
-    let movie_url = `${movie == 'trending' ? nonMovieURL :movieURL}${movie}${movie == 'trending' ? '/all/day' : ''}?api_key=${MOVIE_API_KEY}&language=${defaultLang}`;
+    let movie_url = `${movie == 'trending' ? nonMovieURL :movieURL}${movie}${movie == 'trending' ? '/movie/week' : ''}?api_key=${MOVIE_API_KEY}&language=${defaultLang}`;
 
     const response = await fetch(movie_url);
     const data = await response.json();

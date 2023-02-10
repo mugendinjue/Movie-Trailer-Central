@@ -5,14 +5,8 @@
 
     $: activeUrl = $page.url.searchParams.get('page');
 
-    let pages : any = [
-        { name: 6, href: `/genre/${$page.params.genre}?page=6`},
-        { name: 7, href: '/components/pagination?page=7'},
-        { name: 8, href: '/components/pagination?page=8'},
-        { name: 9, href: '/components/pagination?page=9'},
-        { name: 10, href: '/components/pagination?page=10'}
-    ];
-  
+    export let pages : any[];
+
     $:{
         pages.forEach((page : any)=>{
             let splitUrl = page.href.split('?');
@@ -28,12 +22,9 @@
         pages=pages
     }
 
-    const previous = () => {
-        alert('Previous btn clicked. Make a call to your server to fetch data.');
-    };
-    const next = () => {
-        alert('Next btn clicked. Make a call to your server to fetch data.');
-    };
+    export let previous : any;
+
+    export let next : any;
 
 </script>
 

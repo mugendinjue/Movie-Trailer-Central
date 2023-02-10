@@ -4,20 +4,25 @@ import type { objArr, stringArr } from "./types";
 export const navTabs : stringArr =  [
     "Home",
     "Genre",
+    "Country",
     "Movies",
     "TV Shows",
-    "Top IMDB"
+    // "Top IMDB",
 ]
 
 export const defaultLang : string = `en-US`;
 
-export const movieDBUrl : string = `https://api.themoviedb.org/3/genre/movie/list?api_key=`;
+export const movieGenreUrl : string = `https://api.themoviedb.org/3/genre/movie/list?api_key=`;
 
-export let movieURL : string = `https://api.themoviedb.org/3/movie/`;
+export const movieCoubriesUrl : string = `https://api.themoviedb.org/3/configuration/countries?api_key=`
 
-export let nonMovieURL : string = `https://api.themoviedb.org/3/`;
+export const movieURL : string = `https://api.themoviedb.org/3/movie/`;
+
+export const nonMovieURL : string = `https://api.themoviedb.org/3/`;
 
 export const moviesTypes : string[] = ['trending','now_playing','popular','top_rated','upcoming'];
+
+export const tvShowsURL : string = `https://api.themoviedb.org/3/tv/`;
 
 export const keyFeatures : stringArr = [
     // "Discover the latest movie trailers",

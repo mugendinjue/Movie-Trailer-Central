@@ -4,9 +4,22 @@
     import { page } from '$app/stores';
 	import PaginationComponent from '../../../../components/PaginationComponent.svelte';
 
-    // import type { PageData } from './$types';
+    let current_page = 1,total_pages = 20;
 
-    // export let data: PageData;
+    $: pages  = [
+        { name: 1, href: `/movies`},
+    ];
+
+    $: previous = () => {
+        if (current_page + 5 < total_pages){
+            [...Array(5)].map((item, i) => console.log(item, i))
+        }
+    };
+    $: next = () => {
+        if (current_page + 5 < total_pages){
+            [...Array(5)].map((item, i) => console.log(item, i))
+        }
+    };
 
 </script>
 
@@ -16,15 +29,14 @@
 </div>
 
 <div class="pagination">
-    <PaginationComponent/>
+    <PaginationComponent {previous} {next} {pages}/>
 </div>
 
 <h2>Genre movies go here</h2>
 
 <div class="pagination">
-    <PaginationComponent/>
+    <PaginationComponent {previous} {next} {pages}/>
 </div>
-
 <style>
     .genre {
       margin-top: 40px;

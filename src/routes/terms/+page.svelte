@@ -2,8 +2,6 @@
 
 <script lang="ts">
 	import { Breadcrumb, BreadcrumbItem, Heading, P } from "flowbite-svelte";
-	import Layout from "../+layout.svelte";
-
 </script>
 
 <div class="body">
