@@ -13,7 +13,7 @@
       <Heading tag="h4" class='tt'>{title.cat}</Heading>
       <div class="movies" style={!is_similar_tab ? 'grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))' :'grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))'}>
         {#each title.movies as movie}
-          <MovieCard {movie} type = {title.type} {is_similar_tab} />
+          <MovieCard {movie} type = {title.type} />
         {/each}
       </div>
     </div>
@@ -23,7 +23,6 @@
 <style>
     .movies {
       display: grid;
-      /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
       grid-column-gap: 1rem;
       grid-row-gap: 2rem;
     }

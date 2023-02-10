@@ -10,8 +10,6 @@
 
     export let type : string;
 
-    export let is_similar_tab : boolean;
-
 </script>
 
 <div class="movie-card">
