@@ -11,7 +11,7 @@ Welcome to Movie Trailer Central, a web application built using [Svelte](https:/
 - View movie posters and backdrops.
 
 ## Demos
-
+[Explore](https://astonishing-taffy-dc72cd.netlify.app/)
 ### Browse Movies
 
 ![Browse Movies Demo](browse-movies-demo.gif)
