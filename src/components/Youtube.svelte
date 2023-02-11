@@ -24,10 +24,12 @@
       {title}
     >
       {#if play}
-        <Iframe {play} {id} {title} />
+        <Iframe {id} {title} />
       {:else}
         <Image {id} {title} {altThumb} {play} />
-        <div class="b__overlay" on:click={() => (play = true)} />
+        <div class="b__overlay" on:click={() => (play = true)} on:keydown={event => {
+          console.log('played');
+        }} />
         <div class="v__title"><h3>{title}</h3></div>
       {/if}
       {#if !play}

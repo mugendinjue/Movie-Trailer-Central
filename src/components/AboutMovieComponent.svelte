@@ -27,7 +27,7 @@
           <Rating count rating={details.vote_average} >
             <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400" />
             <a
-              href="#"
+              href="#review-tab"
               class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white"
               >{details.vote_count} reviews</a
             >

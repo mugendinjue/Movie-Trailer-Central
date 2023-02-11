@@ -3,7 +3,9 @@
 </script>
 
 {#if isCustomPlayButton}
-  <div class="play-button" on:click>
+  <div class="play-button" on:click on:keydown={event => {
+    console.log('played');
+  }}>
     <slot />
   </div>
 {:else}

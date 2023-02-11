@@ -2,7 +2,6 @@
     import { scale } from "svelte/transition";
     export let title : string = "";
     export let id : string = "";
-    export let play : boolean;
   </script>
   
   <iframe
