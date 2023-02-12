@@ -1,13 +1,12 @@
 
 import type { objArr, stringArr } from "./types";
 
-export const navTabs : stringArr =  [
-    "Home",
-    "Genre",
-    "Country",
-    "Movies",
-    "TV Shows",
-    // "Top IMDB",
+export const navTabs : objArr =  [
+    {label:"Home", path: "/home"},
+    {label:"Genre", path: "/"},
+    {label:"Country", path: "/"},
+    {label:"Movies", path: "/movies"},
+    {label:"TV Shows", path: "/tv shows"},
 ]
 
 export const defaultLang : string = `en-US`;

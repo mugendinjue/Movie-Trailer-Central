@@ -31,14 +31,14 @@
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
         {#each navTabs as nav_item}
-            {#if nav_item.toLowerCase() == 'home'}
-                <NavLi href="/home" active={true}>Home</NavLi>
-            {:else if ['genre'].includes(nav_item.toLowerCase())}
-                <NavLi id="genre" data-sveltekit-prefetch class="cursor-pointer"><Chevron aligned>{nav_item}</Chevron></NavLi>
-            {:else if ['country'].includes(nav_item.toLowerCase())}
-                <NavLi id="country" data-sveltekit-prefetch class="cursor-pointer"><Chevron aligned>{nav_item}</Chevron></NavLi>
+            {#if nav_item.label.toLowerCase() == 'home'}
+                <NavLi href="/home" active={true}>{nav_item.label}</NavLi>
+            {:else if ['genre'].includes(nav_item.label.toLowerCase())}
+                <NavLi id="genre" data-sveltekit-prefetch class="cursor-pointer"><Chevron aligned>{nav_item.label}</Chevron></NavLi>
+            {:else if ['country'].includes(nav_item.label.toLowerCase())}
+                <NavLi id="country" data-sveltekit-prefetch class="cursor-pointer"><Chevron aligned>{nav_item.label}</Chevron></NavLi>
             {:else}
-                <NavLi href={nav_item.toLowerCase()} >{nav_item}</NavLi>
+                <NavLi href={nav_item.path} >{nav_item.label}</NavLi>
             {/if}
         {/each}
         <Dropdown triggeredBy="#genre" class="w-44 z-20">
