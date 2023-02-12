@@ -3,16 +3,13 @@
     import { page } from '$app/stores';
     import { Pagination, ChevronLeft, ChevronRight } from 'flowbite-svelte'
 
-    $: activeUrl = $page.url.searchParams.get('page');
+    $: activeUrl = $page.params.page;
 
     export let pages : any[];
 
     $:{
         pages.forEach((page : any)=>{
-            let splitUrl = page.href.split('?');
-            let queryString = splitUrl.slice(1).join('?');
-            const hrefParams = new URLSearchParams(queryString);
-            let hrefValue = hrefParams.get('page');
+            let hrefValue = page.href.split('/')[2]
             if ( hrefValue === activeUrl){
                 page.active=true
             }else{

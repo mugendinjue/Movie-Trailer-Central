@@ -5,11 +5,17 @@
 	import AboutMovieComponent from "../../../components/AboutMovieComponent.svelte";
 	import Youtube from "../../../components/Youtube.svelte";
 
-    export let data;
+    export let data : any;
 
-    let type = $page.params.type.toLocaleLowerCase();
+    $: type = $page.params.type.toLocaleLowerCase();
 
-    let {title,video_data:{results:videos},reviews: {results:reviews}, similar: {results:similar}} = data;
+    $: title = data.title;
+
+    $: videos = data.video_data.results;
+
+    $: reviews = data.reviews.results;
+
+    $: similar = data.similar.results;
 
     $: key = videos && videos.length ? videos[0].key : 'MWn0R5cb4h0';
 

@@ -5,7 +5,7 @@ export const navTabs : objArr =  [
     {label:"Home", path: "/home"},
     {label:"Genre", path: "/"},
     {label:"Country", path: "/"},
-    {label:"Movies", path: "/movies"},
+    {label:"Movies", path: "/movies/1"},
     {label:"TV Shows", path: "/tv shows"},
 ]
 

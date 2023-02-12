@@ -1,34 +1,36 @@
 <script lang="ts">
 
-	import MovieListComponent from '../../components/MovieListComponent.svelte';
-	import PaginationComponent from '../../components/PaginationComponent.svelte';
+	import MovieListComponent from '../../../components/MovieListComponent.svelte';
+	import PaginationComponent from '../../../components/PaginationComponent.svelte';
 
-    export let data;
+    export let data : any;
 
-    let {popular} = data;
+    let movies = data.popular.results ;
 
-    let {results,page:current_page,total_pages} = popular;
+    let current_page = data.popular.page;
+
+    let total_pages = data.popular.total_pages;
 
     let titles : any = [
-        {cat: 'Popular Movies', movies: results, type: 'movie'}
+        {cat: 'Popular Movies', movies, type: 'movie'}
     ];
 
     $: pages = [
-        {name: current_page, href: `/movies?page=${current_page}`}
+        {name: current_page, href: `/movies/${current_page}`}
     ];
 
     let generatePages = (action : any) => {
         let last = action == 'next' ? pages[pages.length - 1].name : pages[0].name;
         if (action == 'next' ? last + 5 < total_pages : last - 5 > 1){
             let _arr : any[] = [];
-            if (last == 1) _arr.push({name: last, href: `/movies?page=${last}`});
+            if (last == 1) _arr.push({name: last, href: `/movies/${last}`});
             [...Array(5)].map((item, i) => {
                 _arr.push({
-                    name: action == 'next' ? last + 1 : last - 1 , href: `/movies?page=${action == 'next' ? last + 1 : last - 1}`
+                    name: action == 'next' ? last + 1 : last - 1 , href: `/movies/${action == 'next' ? last + 1 : last - 1}`
                 })
                 action == 'next' ? last ++ : last -- ;
             })
-            if (last == 2) _arr.push({name: 1, href: `/movies?page=1`});
+            if (last == 2) _arr.push({name: 1, href: `/movies/1`});
             pages = action == 'next' ? _arr : _arr.reverse();
         }
     }
