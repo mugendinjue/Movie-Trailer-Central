@@ -1,3 +1,9 @@
+
+<svelte:head>
+   <title>MovieTrailerCentral</title>
+</svelte:head>
+
+
 <script lang="ts">
 
     export let data
