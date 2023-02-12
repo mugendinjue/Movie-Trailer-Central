@@ -11,18 +11,26 @@ Welcome to Movie Trailer Central, a web application built using [Svelte](https:/
 - View movie posters and backdrops.
 
 ## Demos
-[Explore](https://astonishing-taffy-dc72cd.netlify.app/)
-### Browse Movies
+### Home Page
 
-![Browse Movies Demo](browse-movies-demo.gif)
+![Browse Movies Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-16-27.png)
 
-### Watch Trailers
+### Trending
 
-![Watch Trailers Demo](watch-trailers-demo.gif)
+![Watch Trailers Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-16-54.png)
 
-### Movie Details
+### Trailer
 
-![Movie Details Demo](movie-details-demo.gif)
+![Movie Details Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-17-21.png)
+
+![Movie Details Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-18-20.png)
+
+![Movie Details Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-17-37.png)
+
+![Movie Details Demo](/src/lib/assets/Screenshot%20from%202023-02-12%2010-17-48.png)
+
+### Try it out
+Checkout the live application [link](https://astonishing-taffy-dc72cd.netlify.app/)
 
 ## Getting Started
 
