@@ -26,13 +26,13 @@
 
 </script>
 
-<div class="max-w-4xl" id="carousel">
+<!-- <div class="max-w-4xl" id="carousel">
   <div class="overlay">
     <Carousel 
     {images} loop {showCaptions} {showThumbs} duration="3000" 
     />
   </div>
-</div>
+</div> -->
 
 <MovieListComponent {titles}/>
 
